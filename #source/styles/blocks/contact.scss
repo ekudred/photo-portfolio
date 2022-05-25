@@ -1,0 +1,214 @@
+// ========== CONTACT ==========
+
+.contact {
+    width: 100%;
+
+    &-container {
+        display: flex;
+
+        color: #333333;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+
+        &__get-in-touch {
+            width: 75%;
+
+            position: relative;
+
+            @media (max-width: 900px) {
+                width: 100%;
+            }
+
+            &--title {
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: .5px;
+            }
+
+            &--paragraph {
+                margin-top: 1rem;
+                font-size: 1rem;
+            }
+
+            &--form {
+                display: flex;
+                flex-direction: column;
+                margin-top: 2rem;
+
+                .contact-form-input {
+                    border: 2px solid rgba(28, 28, 28, 0.15);
+                    border-radius: 5px;
+                    font-size: .8rem;
+                    padding: .6rem 1rem;
+
+                    width: 50%;
+
+                    transition: all .2s ease;
+
+                    &::placeholder {
+                        color: #333333;
+                    }
+
+                    &.not-valid {
+                        border-color: #b54d4d;
+                    }
+
+                    
+                    @media (max-width: 600px) {
+                        width: 100%;
+                     }
+                }
+
+                .contact-form-textarea {
+                    height: 200px;
+                    width: 100%;
+                    resize: none;
+                    border: 2px solid rgba(28, 28, 28, 0.15);
+                    border-radius: 5px;
+                    padding: 1rem;
+
+                    &::placeholder {
+                        color: #333333;
+                    }
+                }
+
+                &-row {
+                    display: flex;
+
+                    & input:nth-child(2) {
+                        margin-left: 1.5rem;
+
+                        @media (max-width: 600px) {
+                            margin-left: 0;
+                        }
+                    }
+
+                    & input {
+                        margin-bottom: 1.2rem;
+                    }
+
+                    @media (max-width: 600px) {
+                        flex-direction: column;
+                    }
+                }
+
+                &-button {
+                    display: flex;
+                    justify-content: center;
+                    color: #ffffff;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+
+                    width: 6rem;
+
+                    border-radius: 25px;
+                    background-color: $item;
+                    padding: .6rem 1rem;
+                    text-transform: uppercase;
+
+                    margin-top: 1.2rem;
+
+                    transition: all .2s ease;
+
+                    &:hover {
+                        background-color: darken($item, 4);
+                    }
+            
+                    &:active {
+                        background-color: darken($item, 8);
+                    }
+                }
+            }
+
+            .not-valid-message {
+                position: relative;
+                z-index: 9;
+                width: 100%;
+
+                padding: .6rem 1rem;
+                font-size: .9rem;
+
+                margin-top: 1.2rem;
+                border: 2px solid #ffb900;
+            }
+
+            .fail-message {
+                position: relative;
+                z-index: 10;
+                width: 100%;
+
+                background-color: #ffffff;
+
+                padding: .6rem 1rem;
+                font-size: .9rem;
+
+                margin-top: 1.2rem;
+                border: 2px solid #dc3232;
+            }
+        }
+
+        &__address {
+            margin-left: 2rem;
+
+            @media (max-width: 900px) {
+                margin: 2rem 0 0 0;
+            }
+            
+            &--title {
+                font-size: 1rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                letter-spacing: .5px;
+            }
+
+            &--map {
+                margin-top: 1rem;
+
+                & iframe {
+                    width: 300px;
+                    height: 300px;
+
+                    @media (max-width: 900px) {
+                        width: 100%;
+                        height: 400px;
+                    }
+
+                    @media (max-width: 500px) {
+                        height: 300px;
+                    }
+                }
+            }
+
+            &--column {
+                display: flex;
+                flex-direction: column;
+
+                margin-top: 2rem;
+
+                &-title {
+                    font-size: 1rem;
+                    font-weight: bold;
+                    letter-spacing: .5px;
+                }
+
+                &-par {
+                    margin-top: .5rem;
+                }
+
+                &-a {
+                    margin-top: .5rem;
+                    line-height: 1;
+                    cursor: pointer;
+                    color: $item;
+
+                    &:active {
+                        color: darken($item, 4);
+                    }
+                }
+            }
+        }
+    }
+}

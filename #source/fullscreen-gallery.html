@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <title>PHOTOPORT</title>
+</head>
+<body style="overflow: hidden">
+    <!------------ PRELOADER ------------>
+    @@include("./templates/preloader.html")
+    
+    <!------------ HEADER-FIXED ------------>
+    <div class="header-fixed-gallery">
+        @@include("./templates/header-fixed.html")
+    </div>
+
+    <div class="fullscreen-gallery fotorama" data-width="100%" data-height="100%" data-hash="true" data-nav="thumbs" data-keyboard="true" 
+    data-fit="cover" data-click="false" data-transition="slide" data-clicktransition="slide" data-thumbheight="50">
+        <img src="./images/con3.jpg">
+        <img src="./images/con1.jpg">
+        <img src="./images/con6.jpg">
+        <img src="./images/con1.jpg">
+        <img src="./images/con6.jpg">
+        <img src="./images/con3.jpg">
+        <img src="./images/con1.jpg">
+        <img src="./images/con6.jpg">
+    </div>
+
+    <div class="filter-gallery-categories">
+        <div class="filter-gallery-categories--header">
+            <div class="filter-gallery-categories--header-title">Gallery Categories</div>
+            <svg viewBox="0 0 64 64"><path d="M32.033,29.19l15.55,-15.55l2.863,2.863l-15.55,15.55l15.55,15.55l-2.863,2.863l-15.55,-15.55l-15.55,15.55l-2.863,-2.863l15.55,-15.55l-15.55,-15.55l2.863,-2.863l15.55,15.55Z"/><path d="M32.033,29.19l15.55,-15.55l2.863,2.863l-15.55,15.55l15.55,15.55l-2.863,2.863l-15.55,-15.55l-15.55,15.55l-2.863,-2.863l15.55,-15.55l-15.55,-15.55l2.863,-2.863l15.55,15.55Z"/></svg>
+        </div>
+        @@include("./templates/gallery-categories.html")
+    </div>
+
+    <script src="./script/script.min.js"></script>
+</body>
+</html>

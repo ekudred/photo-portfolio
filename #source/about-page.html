@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <title>PHOTOPORT</title>
+</head>
+<body style="background-image:url(./images/cardboard_flat.png); background-size: 5vw;">
+    <!------------ PRELOADER ------------>
+    @@include("./templates/preloader.html")
+
+    <!------------ HEADER-FIXED ------------>
+    @@include("./templates/header-fixed.html")
+
+    <!------------ HEADER-ABOUT-PAGE ------------>
+    <div class="header-portfolio">
+        <div class="header-portfolio__image">
+            <img src="./images/con3.jpg">
+        </div>
+        <div class="header-portfolio__title">
+            About
+        </div>
+    </div>
+    
+    <!------------ CONTENT-ABOUT-PAGE ------------>
+    <div class="content br">
+        @@include("./templates/aboutme.html")
+        @@include("./templates/boxme.html")
+        @@include("./templates/content-footer.html")
+    </div>
+
+    <!------------ FOOTER ------------>
+    @@include("./templates/footer.html")
+
+    <script src="./script/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+// ========== HEADER-CLASSIC-PORTFOLIO ==========
+
+.header-classic-portfolio {
+    width: 100%;
+
+    box-shadow: 0 0 5px #333333;
+
+    &-slider-wrapper {
+        width: 100%;
+
+        .header-classic-portfolio-title {
+            position: absolute;
+            z-index: 20;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            color: #ffffff;
+            line-height: 1;
+            text-align: center;
+            letter-spacing: 2px;
+
+            -ms-user-select: none; 
+            -moz-user-select: none; 
+            -webkit-user-select: none; 
+            user-select: none; 
+
+            &--top {
+                font-size: 2.8rem;
+                font-family: "Vidaloka", sans-serif;
+            }
+
+            &--bottom {
+                text-transform: uppercase;
+                font-size: 1rem;
+                font-weight: bold;
+
+                margin-top: 1.5rem;
+            }
+        }
+
+        .header-classic-portfolio-slider {
+            width: 100%;
+        
+            img {
+                max-width: 100%;
+                width: 100vw;
+                height: 100vh;
+        
+                display: block;
+        
+                object-fit: cover;
+            }
+        
+            & .slick-arrow {
+                position: absolute;
+                z-index: 10;
+                bottom: 50%;
+        
+                display: block;
+        
+                background-image: url("../images/arrowside.png");
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 30px 30px;
+                background-color: rgba(28, 28, 28, 0.3);
+                cursor: pointer;
+        
+                width: 40px;
+                height: 60px;
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+        
+                font-size: 0;
+                transition: all .2s ease;
+        
+                &:hover {
+                    background-color: rgba(28, 28, 28, 0.4);
+                }
+        
+                &:active {
+                    background-color: rgba(28, 28, 28, 0.5);
+                }
+        
+                &.slick-next {
+                    right: 0;
+                }
+        
+                &.slick-prev {
+                    left: 0;
+                    transform: rotate(180deg);
+                }
+            }
+        
+            & .slick-list {
+                width: 100%;
+                display: flex;
+                overflow: hidden;
+        
+                position: relative;
+                z-index: 1;
+
+                animation-name: toRIght;
+                animation-duration: 1.5s;
+                animation-timing-function: ease;
+
+                @keyframes toRIght {
+                    0% {
+                        transform: translateX(-100%);
+                    }
+
+                    100% {
+                        transform: translateX(0);
+                    }
+                }
+            }
+        
+            & .slick-track {
+                width: 100%;
+                display: flex;
+            }
+        
+            & .slick-slide > div {
+                display: flex;
+            }
+        }
+    }
+}

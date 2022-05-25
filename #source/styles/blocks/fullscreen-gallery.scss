@@ -1,0 +1,91 @@
+// ========== FULLSCREEN-GALLERY ==========
+
+.fullscreen-gallery {
+    display: flex;
+    flex-direction: column;
+
+    background-image: url("../images/dark_wall.png");
+    background-size: 5vw;
+
+    padding-top: 4.3rem;
+
+    & img {
+        object-fit: cover;
+        width: auto;
+        height: 100%;
+        
+        display: flex;
+    }
+
+    & .fotorama__stage {
+        height: calc(100vh - 52px - 4.3rem) !important;
+
+        & .fotorama__stage__frame {
+
+            & .fotorama__img {
+                width: auto !important;
+            }
+
+            & img {
+                object-fit: cover;
+                width: 100% !important;
+                height: auto !important;
+                max-width: 100% !important;
+                max-height: calc(100vh - 52px) !important;
+
+                left: 0 !important;
+                top: 0 !important;
+                margin: auto auto;
+            }
+        }
+    }
+
+    & .fotorama__nav-wrap {
+        height: 52px;
+
+        & .fotorama__thumb {
+            background-color: transparent;
+        }
+    }
+
+    & .fotorama__arr {
+        position: absolute;
+        z-index: 2;
+        bottom: 50%;
+
+        display: block;
+
+        background-image: url("../images/arrowside.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 30px 30px;
+        background-color: rgba(28, 28, 28, 0.3);
+        cursor: pointer;
+
+        width: 40px;
+        height: 60px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        transition: all .2s ease;
+
+        font-size: 0;
+
+        &:hover {
+            background-color: rgba(28, 28, 28, 0.4);
+        }
+
+        &:active {
+            background-color: rgba(28, 28, 28, 0.5);
+        }
+
+        &--next {
+            right: 0;
+        }
+
+        &--prev {
+            left: 0;
+            transform: rotate(180deg) !important;
+        }
+    }
+}

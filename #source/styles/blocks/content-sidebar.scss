@@ -1,0 +1,114 @@
+.content-sidebar {
+    max-width: 1300px;
+    margin: 0 auto;
+    
+    display: flex;
+
+    & .content.br {
+        width: 75%;
+
+        max-width: auto;
+
+        @media (max-width: 1000px) {
+            width: 100%;
+        }
+
+        .aboutme-container {
+            @media (max-width: 1200px) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            &__left {
+                @media (max-width: 1200px) {
+                    margin-right: 0;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+
+    & .sidebar {
+        width: 25%;
+
+        @media (max-width: 1000px) {
+            display: none;
+        }
+    
+        & .footer {
+            background-image: none;
+            background-size: none;
+
+            color: #333333;
+            box-shadow: none;
+    
+            background-color: transparent;
+
+            & .footer-main {
+                flex-direction: column;
+
+                &__post {
+                    width: 100%;
+
+                    margin: 0;
+
+                    &:nth-child(1) {
+                        margin-bottom: 2rem;
+                    }
+
+                    &:nth-child(2) {
+                        order: 1;
+                        flex-direction: column-reverse;
+
+                        & .post-content {
+                            margin-bottom: 2rem;
+
+                            &:first-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+
+                    &:nth-child(3) {
+                        order: -1;
+                        margin-bottom: 2rem;
+                    }
+
+                    &:nth-child(4) {
+                        order: -2;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+
+            .block-post__right-date {
+                color: rgba(#aaaaaa, 1);
+                font-weight: bold;
+            }
+
+            .post-tag {
+                color: #333333;
+                background-color: #ffffff;
+                box-shadow: none;
+            }
+
+            .get-in-touch {
+                display: none;
+            }
+
+            .elsewhere {
+                .post-title {
+                    display: none;
+                }
+            }
+
+            .footer-end {
+                display: none;
+            }
+
+            .post-contents-icons {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

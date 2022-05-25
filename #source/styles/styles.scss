@@ -1,0 +1,60 @@
+@font-face {
+    font-family: "Lato";
+    src : url("../fonts/Lato/Lato-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Vidaloka";
+    src : url("../fonts/Vidaloka/Vidaloka-Regular.ttf");
+}
+
+$item: #00c8c8;
+
+body {
+    font-family: "Lato";
+    font-size: 16px;
+
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    &.hidden {
+        overflow: hidden;
+    }
+}
+
+@import "./standart.scss";
+
+@import "./blocks/preloader.scss";
+@import "./blocks/header-fixed.scss";
+@import "./blocks/footer.scss";
+
+@import "./blocks/header-classic-portfolio.scss";
+@import "./blocks/content-footer.scss";
+@import "./blocks/content-classic-portfolio.scss";
+
+@import "./blocks/gallery-categories.scss";
+@import "./blocks/fullscreen-gallery.scss";
+
+@import "./blocks/portfolio-filter.scss";
+@import "./blocks/header-portfolio.scss";
+
+@import "./blocks/header-flow-gallery.scss";
+@import '../../node_modules/swiper/swiper.scss';
+
+@import "./blocks/features.scss";
+@import "./blocks/blog-posts.scss";
+@import "./blocks/boxme.scss";
+@import "./blocks/aboutme.scss";
+@import "./blocks/testimonials.scss";
+@import "./blocks/clients.scss";
+
+@import "./blocks/content-sidebar.scss";
+@import "./blocks/journal-post.scss";
+@import "./blocks/blog-gallery.scss";
+@import "./blocks/post-image.scss";
+@import "./blocks/post-video.scss";
+
+@import "./blocks/contact.scss";
+
+@import "./blocks/classic-blog-nav.scss";

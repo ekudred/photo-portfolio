@@ -1,0 +1,72 @@
+.header-flow-gallery-container {
+    width: 100%;
+    height: 100vh;
+
+    background-image: url("../images/dark_wall.png");
+    background-size: 30vw;
+
+    overflow: hidden;
+
+    .header-flow-gallery-wrapper {
+        display: flex;
+
+        & .swiper-slide {
+            background-position: center;
+            background-size: auto 100%;
+            background-repeat: no-repeat; 
+        
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+.content {
+    padding: 5rem 2rem 5rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+
+    background-color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: 900px) {
+        padding: 2rem;
+    }
+    
+    & > div {
+        padding: 3rem 0;
+
+        @media (max-width: 900px) {
+            padding: 1.5rem 0;
+        }
+    }
+
+    & > div:first-child {
+        padding-top: 0;
+    }
+
+    &.br {
+        padding: 5rem 2rem 0rem 2rem;
+
+        @media (max-width: 900px) {
+            padding: 2rem 2rem 0 2rem;
+        }
+
+        @media (max-width: 400px) {
+            padding: 1rem 1rem 0 1rem;
+        }
+    }
+
+    &.br > div {
+        border-bottom: 2px solid #ebebeb;
+
+        &:last-child {
+            border: none;
+        }
+    }
+}

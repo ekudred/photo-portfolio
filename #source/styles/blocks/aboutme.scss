@@ -1,0 +1,144 @@
+// ========== ABOUTME ==========
+
+.aboutme {
+    width: 100%;
+    padding: 3rem 0;
+
+    &-container {
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__left {
+            margin-right: 2rem;
+
+            @media (max-width: 900px) {
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+        
+        &__right {
+            display: flex;
+            flex-direction: column;
+            
+            & > div {
+                margin-bottom: 1rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    &-img {
+        width: 400px;
+        
+        @media (max-width: 900px) {
+            width: auto;
+            max-width: 400px;
+        }
+
+        & img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    &-title {
+        text-transform: uppercase;
+        color: #333333;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: bold;
+    }
+
+    &-paragraph {
+        color: #333333;
+        line-height: 1.5rem;
+    }
+
+    &-blockquote {
+        padding-left: 1rem;
+        border-left: 3px solid $item;
+        color: #909090;
+        font-size: 1.3rem;
+        font-family: "Vidaloka", sans-serif;
+    }
+
+    &-elsewhere {
+        display: flex;
+        flex-direction: column;
+
+        &-title {
+            text-transform: uppercase;
+            color: #333333;
+            font-size: .9rem;
+            letter-spacing: 1px;
+            font-weight: bold;
+
+            margin-bottom: .7rem;
+        }
+
+        &-icons {
+            display: flex;
+
+            & a {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                transition: all .2s ease;
+
+                margin-right: .35rem;
+
+                &:last-child {
+                    margin-right: 0;
+                }
+    
+                & svg {
+                    width: 30px;
+                    height: 17px;
+                    fill: #ffffff;
+                }
+            }
+    
+            &-twitter {
+                background-color: #5daed5;
+    
+                &:hover {
+                    background-color: darken(#5daed5, 10);
+                }
+            }
+    
+            &-vk {
+                background-color: #4470cf;
+    
+                & svg {
+                    position: relative;
+                    right: 1px;
+                }
+    
+    
+                &:hover {
+                    background-color: darken(#4470cf, 10);
+                }
+            }
+    
+            &-inst {
+                background-color: #c53942;
+    
+                &:hover {
+                    background-color: darken(#c53942, 10);
+                }
+            }
+        }
+    }
+}

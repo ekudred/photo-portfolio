@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
+    <title>PHOTOPORT</title>
+</head>
+<body style="background-image:url(./images/cardboard_flat.png); background-size: 5vw;">
+    <!------------ PRELOADER ------------>
+    @@include("./templates/preloader.html")
+    
+    <!------------ HEADER-FIXED ------------>
+    @@include("./templates/header-fixed.html")
+
+    <!------------ HEADER-ABOUT-PAGE ------------>
+    <div class="header-portfolio">
+        <div class="header-portfolio__image">
+            <img src="./images/con3.jpg">
+        </div>
+        <div class="header-portfolio__title">
+            Out Journal
+        </div>
+    </div>
+    
+    <!------------ CONTENT-ABOUT-PAGE ------------>
+    <div class="content-sidebar">
+        <div class="content br">
+            @@include("./templates/post-video.html")
+            @@include("./templates/journal-post.html")
+            @@include("./templates/journal-post.html")
+            @@include("./templates/blog-gallery.html")
+
+            @@include("./templates/classic-blog-nav.html")
+        </div>
+        <div class="sidebar">
+            @@include("./templates/footer.html")
+        </div>
+    </div>
+
+    <!------------ FOOTER ------------>
+    @@include("./templates/footer.html")
+
+    <script src="./script/script.min.js"></script>
+</body>
+</html>

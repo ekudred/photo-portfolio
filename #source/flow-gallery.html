@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ery">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <title>PHOTOPORT</title>
+</head>
+<body>
+    <!------------ PRELOADER ------------>
+    @@include("./templates/preloader.html")
+    
+    <!------------ HEADER-FIXED ------------>
+    @@include("./templates/header-fixed.html")
+
+    <!---------- HEADER-FLOW-GALLERY ---------->
+    @@include("./templates/header-flow-gallery.html")
+
+    <!---------- CONTENT-FLOW-GALLERY ---------->
+    <div class="content">
+        @@include("./templates/features.html")
+        @@include("./templates/blog-posts.html")
+        @@include("./templates/boxme.html")
+    </div>
+
+    <!------------ FOOTER ------------>
+    @@include("./templates/footer.html")
+
+    <script src="./script/script.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+// ========== FEATURES ==========
+
+.features {
+    width: 100%;
+
+    padding: 3rem 0;
+
+    &-container {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.5rem;
+            color: #333333;
+            line-height: 2.2rem;
+            letter-spacing: 1.5px;
+
+            margin-bottom: 3rem;
+        }
+
+        &__blocks {
+            display: flex;
+            flex-direction: column;
+
+            &-row {
+                display: flex;
+
+                width: 100%;
+
+                @media (max-width: 800px) {
+                    flex-direction: column;
+
+                    .features-container__blocks-row--block {
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                &:first-child {
+                    .features-container__blocks-row--block {
+                        margin-bottom: 3rem;
+                    }
+                }
+
+                &--block {
+                    display: flex;
+                    width: 50%;
+
+                    @media (max-width: 800px) {
+                        width: 100%;
+                    }
+
+                    @media (max-width: 500px) {
+                        flex-direction: column;
+                    }
+                    
+                    &:first-child {
+                        margin-right: 2rem;
+
+                        @media (max-width: 800px) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__block-icon {
+            & img {
+                width: 45px;
+                height: 45px;
+            }
+
+            margin-right: 1.5rem;
+
+            @media (max-width: 500px) {
+                margin-right: 0;
+                margin-bottom: .5rem;
+            }
+        }
+
+        &__block-text {
+            display: flex;
+            flex-direction: column;
+            font-size: 1rem;
+            color: #333333;
+
+            &--title {
+                letter-spacing: 1px;
+                font-size: .9rem;
+                text-transform: uppercase;
+                font-weight: bold;
+
+                margin-bottom: 1rem;
+            }
+
+            &--paragraph {
+                font-weight: lighter;
+            }
+        }
+    }
+}

@@ -1,0 +1,191 @@
+// ========== BOXME ==========
+
+.boxme {
+    width: 100%;
+
+    padding: 3rem 0;
+
+    &-container {
+        color: #333333;
+        font-size: 1rem;
+
+        display: flex;
+        justify-content: space-between;
+
+        @media (max-width: 800px) {
+            flex-direction: column;
+        }
+
+        &-column {
+            display: flex;
+            flex-direction: column;
+
+            & > div {
+                margin-bottom: 1.5rem;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+
+            width: 50%;
+
+            margin-right: 2rem;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            @media (max-width: 800px) {
+                width: 100%;
+
+                margin-right: 0;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &-section {
+        display: flex;
+        flex-direction: column;
+        
+        & > div {
+            margin-bottom: .5rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+    }
+
+    &-skill {
+        display: flex;
+
+        &-item {
+            &::after {
+                content: "-";
+                color: $item;
+                padding: 0 .8rem;
+            }
+        }
+
+        &-progress {
+            color: $item;
+
+            &::after {
+                content: "%";
+                color: $item;
+            }
+        }
+    }
+
+    &-progressbar-wrapper {
+        width: 100%;
+        max-width: 530px;
+        height: 1rem;
+        background-color: #E0E0E0;
+
+        & .boxme-progressbar {
+            height: 1rem;
+            width: 0%;
+            transition: 3s ease;
+            background-color: $item;
+        }
+    }
+
+    .boxme-tabs {
+        display: flex;
+        flex-direction: column;
+
+        & > div {
+            margin-bottom: 1rem;
+
+            &:last-child {
+                margin: 0;
+            }
+        }
+
+        &__buttons {
+            display: flex;
+
+            overflow-x: auto;
+            white-space: nowrap;
+
+            &-item {
+                padding: .6rem 1.1rem;
+                border: 2px solid #E0E0E0;
+                border-radius: 25px;
+
+                text-transform: uppercase;
+                color: darken(#E0E0E0, 40);
+                font-size: .8rem;
+                font-weight: bold;
+
+                cursor: pointer;
+
+                transition: all .2s ease;
+
+                margin-right: .5rem;
+    
+                &:last-child {
+                    margin: 0;
+                }
+
+                &.active {
+                    color: $item;
+                    border-color: $item;
+                }
+            }
+        }
+
+        &__contents {
+            &-item {
+                display: none;
+                flex-direction: column;
+
+                transition: opacity .5s ease;
+
+                & > div {
+                    margin-bottom: 1rem;
+        
+                    &:last-child {
+                        margin: 0;
+                    }
+                }
+
+                &.active {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &-title {
+        font-weight: bold;
+        margin-bottom: .5rem;    }
+
+    &-paragraph {
+        line-height: 1.5rem;
+    }
+
+    &-ul {
+        display: flex;
+        flex-direction: column;
+        padding-left: 1rem;
+
+        &-item {
+            list-style-type: disc;
+            color: $item;
+
+            margin-bottom: .3rem;
+
+            &:last-child {
+                margin: 0;
+            }
+
+            &-text {
+                color: #333333;
+            }
+        }
+    }
+}

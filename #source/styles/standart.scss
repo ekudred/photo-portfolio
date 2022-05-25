@@ -1,0 +1,32 @@
+*,*:before,*:after {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    border: inherit;
+    cursor: pointer;
+}
+
+input:focus, button[type="submit"]:focus,
+button, textarea  {
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+li {
+    list-style: none;
+}
+
+.slick-slide:focus, .slick-slide:active, .slick-arrow:focus, .slick-dots button:focus {
+    outline: none;
+}

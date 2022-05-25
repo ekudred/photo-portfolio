@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.min.css">
+    <title>PHOTOPORT</title>
+</head>
+<body>
+    <!------------ PRELOADER ------------>
+    @@include("./templates/preloader.html")
+    
+    <!------------ HEADER-FIXED ------------>
+    @@include("./templates/header-fixed.html")
+
+    <!------------ HEADER-PORTFOLIO ------------>
+    <div class="header-portfolio">
+        <div class="header-portfolio__image">
+            <img src="./images/con3.jpg">
+        </div>
+        <div class="header-portfolio__title">
+            Permalink Portfolio
+        </div>
+    </div>
+
+    <!------------ PERMALINK-PORTFOLIO ------------>
+    <div class="portfolio-filter">
+        <div class="portfolio-filter-header">
+            <button type="button" data-filter="all" class="portfolio-filter-header__item">ALL</button>
+            <button type="button" data-filter=".category-1" class="portfolio-filter-header__item">CATEGORY I</button>
+            <button type="button" data-filter=".category-2" class="portfolio-filter-header__item">CATEGORY II</button>
+            <button type="button" data-filter=".category-3" class="portfolio-filter-header__item">CATEGORY III</button>
+            <button type="button" data-filter=".category-4" class="portfolio-filter-header__item">CATEGORY IV</button>
+        </div>
+        @@include("./templates/gallery-categories.html")
+    </div>
+
+    <!------------ FOOTER ------------>
+    @@include("./templates/footer.html")
+
+    <script src="./script/script.min.js"></script>
+</body>
+</html>
